@@ -1,0 +1,147 @@
+html, body{
+    background-color: antiquewhite;
+    margin: 0;
+    /* font-family: 'Bodoni Moda', serif; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+.hero{    
+    /* largeur | style | couleur */
+    margin: 15px 10px;
+    border: 0.3rem solid black;
+    border-radius: 70px;
+    padding: 0 8px;
+    max-width: 1210px;
+}
+
+@media (max-width: 1250px){
+    .hero{
+    }
+}
+
+nav{
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-item{
+    padding: 5px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 24;
+    letter-spacing: -1px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    transition:  0.5s ease-out;
+    border-radius: 10px;
+}
+.menu-item:hover{
+    color:antiquewhite;
+    background-color:black;
+}
+@keyframes zoom {
+    0%{font-size: 32px;}
+    100%{font-size: 36px;}
+}
+
+.title{
+    font-size: 36px;
+    letter-spacing: -3px;
+    color: rgb(66, 66, 66);
+    font-family: 'Bodoni Moda', serif;
+    }
+
+.main{
+    padding:0 3rem;
+    display: flex;
+    justify-content:left;
+    align-items: top;
+}
+
+img{
+    border-radius: 60px;
+    object-fit: cover;
+    width:50%;
+}
+.info{
+    padding-left: 4rem;
+}
+h1{
+    font-size: 64px;
+    letter-spacing: -7px;
+    font-weight: 400;
+    margin: 0;
+}
+h2{
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+p{
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.meal-main{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.meal{
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease-out;
+    font-size: 10px;
+}
+
+.meal:hover{
+    color: antiquewhite;
+    background-color: black;
+}
+
+/* Marquee styles */
+.marquee {
+    padding: 0 5px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+  }
+  
+  .marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll 20s linear infinite;
+    font-size: 1rem;
+    padding: 3px 0;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
